@@ -28,17 +28,6 @@ const List = () => {
     }, [sort])  
     }
 
-/*
-    {
-        for(let j = 0; j< [...dataBase].length; j++){
-            for (let i = 0; i < [...dataBase][j].genre.length; i++) {
-                if ([...dataBase].genre[i] === "War") {
-                  console.log([...dataBase][j].title);
-                }
-            }
-        }
-    } */
-
     const changeSortType = (event) => {
         if(lastActive != "x"){
             lastActive.className = "";

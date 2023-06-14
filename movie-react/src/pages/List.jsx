@@ -16,19 +16,24 @@ const List = () => {
             case "Best Rate": sorted = [...dataBase].sort((a, b) => b.rate - a.rate); break;
             case "A-Z": sorted = [...dataBase].sort((a, b) => a.title.localeCompare(b.title));break;
             case "Z-A": sorted = [...dataBase].sort((a, b) => b.title.localeCompare(a.title));break;
+            case "War": sorted = [...dataBase].filter(movie => movie.genre.includes("War"));break;
+            case "Action": sorted = [...dataBase].filter(movie => movie.genre.includes("Action"));break;
+            case "Adventure": sorted = [...dataBase].filter(movie => movie.genre.includes("Adventure"));break;
+            case "Comedy": sorted = [...dataBase].filter(movie => movie.genre.includes("Comedy"));break;
+            case "Western": sorted = [...dataBase].filter(movie => movie.genre.includes("Western"));break;
+            case "Thriller": sorted = [...dataBase].filter(movie => movie.genre.includes("Thriller"));break;
             default:break;
         }
         setDataBaseSorted(sorted)
     }, [sort])  
     }
 
-
-  /*  {
-        for(let j = 0; j< dataBase.length; j++)
-        {
-            for (let i = 0; i < dataBase[j].genre.length; i++) {
-                if (dataBase.genre[i] === "War") {
-                  console.log(dataBase[j].title);
+/*
+    {
+        for(let j = 0; j< [...dataBase].length; j++){
+            for (let i = 0; i < [...dataBase][j].genre.length; i++) {
+                if ([...dataBase].genre[i] === "War") {
+                  console.log([...dataBase][j].title);
                 }
             }
         }

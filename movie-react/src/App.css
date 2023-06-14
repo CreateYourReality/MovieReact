@@ -1,0 +1,91 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+img{
+  max-width: 100%;
+}
+
+nav{
+  height: 10vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 100%;
+  background-color: lightseagreen;
+}
+
+section{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 90vh;
+  flex-direction: column;
+}
+
+.movieList{
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-template-rows: auto;
+  margin-top: 5px;
+}
+
+.movie-item{
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 5px;
+  border: 1px groove black;
+  background-color: lightblue;
+  margin: 5px;
+}
+
+a{
+  text-decoration: none;
+}
+
+.sortButtons{
+  font-size: clamp(1rem,1.5vw,2rem);
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+  align-items: center;
+  height: 80px;
+}
+
+.sortButtons a{
+  background-color: purple;
+  color: white;
+  padding: 10px 25px;
+  border-radius: 15px;
+  border: solid black 1px;
+  cursor: pointer;
+}
+
+.genreButtons{
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  grid-template-rows: auto;
+}
+
+.genreButtons a{
+  text-align: center;
+  padding: 10px 0;
+  background-color: coral;
+}
+
+.sortButtons a:hover{
+  background-color: lightblue;
+}
+
+.sortButtons a.active{
+  background-color: brown;
+}
